@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+.logo-img {
+  width: 192px;
+  height: 32px;
+}
+
+.top-pane {
+  background-color: hsl(180, 3%, 14%);
+}
+
+.pane {
+  height: 45.5vh;
+  display: flex;
+}
+
+.html-icon {
+  color: rgb(255, 25, 0);
+}
+
+.css-icon {
+  color: rgb(83, 149, 219);
+}
+
+.js-icon {
+  color: rgb(255, 237, 37);
+}
+
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.64rem 0.32rem;
+  background-color: hsl(180, 3%, 14%);
+}
+
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+  margin-left: 0.64rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #151515;
+  color: white;
+  padding: 0.64rem 0.64rem 0.64rem 1.28rem;
+  border-top-right-radius: 0.64rem;
+  border-top-left-radius: 0.64rem;
+}
+.CodeMirror {
+  height: 100% !important; /*will overwrite codemirror's default style which has static 
+  height and will make height 100% of the editor (100% height of parent div)*/
+}
+.code-mirror-wrapper {
+  flex-grow: 1; /*to fill the entire height */ /*what is flex-grow ?*/
+  border-bottom-left-radius: 0.64rem;
+  border-bottom-right-radius: 0.64rem;
+  overflow: hidden;
+}
